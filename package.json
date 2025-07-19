@@ -1,6 +1,6 @@
 {
   "name": "ai-code-review-tool",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An AI tool for automated code review against the master branch.",
   "main": "src/index.js",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "ai-review-code": "node src/index.js ai review code"
+    "ai-review-code": "node src/index.js"
   },
   "dependencies": {
     "@google/genai": "^1.10.0",

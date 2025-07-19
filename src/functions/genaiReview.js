@@ -11,6 +11,5 @@ export default async function genaiReviewCode(codeChanges) {
     model: "gemini-2.5-flash",
     contents: `Review the following code changes and reply with "✅ Passed" or "❌ Not Passed" and a short reason:\n${codeChanges}`,
   });
-  console.log(response.text);
   return response.text;
 }

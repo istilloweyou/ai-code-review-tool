@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import 'dotenv/config';
 import { getDiff } from './git/diff.js';
 import { reviewCode } from './functions/review.js';

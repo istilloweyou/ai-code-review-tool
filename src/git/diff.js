@@ -4,7 +4,7 @@ exports.getDiff = async function() {
     const execPromise = util.promisify(exec);
 
     try {
-        const { stdout } = await execPromise('git diff master...HEAD');
+        const { stdout } = await execPromise('git diff main...HEAD');
         return stdout;
     } catch (error) {
         console.error('Error retrieving code changes:', error);

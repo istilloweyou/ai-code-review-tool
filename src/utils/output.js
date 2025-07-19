@@ -1,7 +1,7 @@
-export function printResult(result) {
-    if (result === "pass") {
-        console.log("Code review result: ✅ Pass");
+export function printResult(result = '') {
+    if (result.includes("review passed")) {
+        console.log("✅ Passed");
     } else {
-        console.log("Code review result: ❌ Not Pass");
+        console.log("❌ Not Passed");
     }
 }

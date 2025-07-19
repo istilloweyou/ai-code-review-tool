@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@google/genai": "^1.10.0",
+    "dotenv": "^17.2.0",
     "openai": "^5.10.1",
     "simple-git": "^2.40.0"
   },

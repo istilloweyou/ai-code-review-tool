@@ -6,16 +6,16 @@ function reviewCode(codeChanges) {
         noUnusedVariables: true,
     };
 
-    let result = "pass";
+    let result = "✅ Passed";
 
     // Check for maximum lines of code changed
     if (codeChanges.split('\n').length > criteria.maxLines) {
-        result = "not pass";
+        result = "❌ Not Passed";
     }
 
     // Check for console.log statements
     if (criteria.noConsoleLogs && codeChanges.includes('console.log')) {
-        result = "not pass";
+        result = "❌ Not Passed";
     }
 
     // Check for unused variables (this is a simplified check)
@@ -31,7 +31,7 @@ function reviewCode(codeChanges) {
         const usageRegex = new RegExp(`\\b${variable}\\b`, 'g');
         const usageCount = (codeChanges.match(usageRegex) || []).length;
         if (usageCount <= 1) {
-            result = "not pass";
+            result = "❌ Not Passed";
             break;
         }
     }

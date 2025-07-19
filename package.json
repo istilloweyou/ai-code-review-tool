@@ -7,7 +7,6 @@
     "ai-review-code": "./src/index.js"
   },
   "scripts": {
-    "start": "node src/index.js",
     "ai-review-code": "node src/index.js"
   },
   "dependencies": {

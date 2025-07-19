@@ -5,7 +5,7 @@ const openai = new OpenAI({
 });
 
 export async function openAIReview(codeChanges) {
-    const prompt = `Review the following code changes and reply with "pass" or "not pass" and a short reason:\n${codeChanges}`;
+    const prompt = `Review the following code changes and reply with "✅ Passed" or "❌ Not Passed" and a short reason:\n${codeChanges}`;
     const response = await openai.chat.completions.create({
         model: "gpt-4o",
         messages: [{ role: "user", content: prompt }],
